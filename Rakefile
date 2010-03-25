@@ -1,11 +1,7 @@
-# Add your own tasks in files placed in lib/tasks ending in .rake,
-# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+require 'rubygems'
+require 'spec/rake/spectask'
 
-RAILS_ROOT = "#{File.dirname(__FILE__)}/" unless defined?(RAILS_ROOT)
-
-require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
-
-require 'tasks/rails'
-
+Spec::Rake::SpecTask.new do |t|
+  t.spec_files = FileList['spec/**/*_spec.rb']
+  t.spec_opts = ['--colour', '--format=specdoc']
+end
