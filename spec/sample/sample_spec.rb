@@ -1,6 +1,6 @@
 require 'open-uri'
 
-describe "sanity check" do
+describe "sanity checks" do
 
   it "should test truth" do
     true.should be_true
