@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'open-uri'
 
 describe "sanity checks" do
